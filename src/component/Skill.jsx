@@ -12,6 +12,8 @@ import photo from './Images/gallery.png';
 import next from './Images/next.png';
 import react from './Images/react.png';
 import web from './Images/webdesign.png';
+import git from './Images/git.png';
+import github from './Images/github.png'
 const skills = [
   { name: "HTML", img: Html },
   { name: "CSS", img: css },
@@ -20,6 +22,8 @@ const skills = [
   { name: "Next JS", img: next },
   { name: "Bootstrap", img: bootstrap },
   { name: "Tailwind CSS", img: tcss },
+  { name: "Git", img: git },
+  { name: "GitHub", img: github },
   { name: "C", img: c },
   { name: "Website Designing", img: web },
   { name: "Video Editing", img: video },
