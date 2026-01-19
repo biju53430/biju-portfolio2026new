@@ -1,6 +1,6 @@
 /* Main Footer Background */
 .footer-section {
- background: linear-gradient(90deg, #113f7c, #8d4604);
+  background: linear-gradient(90deg,  #000000, #062a5a) !important;
     padding-top: 60px;
     color: white;
     text-align: center;
@@ -40,7 +40,7 @@
 
 /* Bottom Copyright Bar */
 .copyright-bar {
-     background: linear-gradient(90deg, #04306b, #5e2f03);
+     background: linear-gradient(90deg, #0f325f, #381c02);
     
     padding: 25px 0;
     border-top: 1px solid #222;

@@ -17,20 +17,20 @@ html, body {
    Dark / Light Mode
    ========================= */
 .dark-mode {
-    background: linear-gradient(90deg, #0c438b, #c26208);
+  background: linear-gradient(90deg,  #000000, #0c438b);
   color: #e0e0e0;
 }
 
 .light-mode {
-  background: linear-gradient(135deg, #f9f9f9, #ffffff);
-  color: #333;
+  color: #fdfdfd;
+  background: linear-gradient(90deg, #0c438b, #000000);
 }
 
 /* =========================
    Navigation Bar
    ========================= */
 #nav {
-  background: linear-gradient(90deg, #0c438b, #c26208);
+background: linear-gradient(90deg , #0c438b, #c26208) ;
   width: 100%;
   position: fixed;
   top: 0;
@@ -161,17 +161,18 @@ html, body {
 
 /* Buttons */
 .btn-dark {
-    background: linear-gradient(90deg, #0c438b, #c26208);
+   background: linear-gradient(90deg, #c26208, #0c438b) !important;
+ 
   border-radius: 8px;
   transition: all 0.3s;
 }
 .btn-dark:hover {
-    background: linear-gradient(90deg, #c26208 , #0c438b);
+    background: linear-gradient(90deg, #974c05 , #0a3670);
   transform: scale(1.05);
 }
 .btn-light{
       border-color: #1b1b1b !important;
-
+ background: linear-gradient(90deg, #0c438b, #c26208) !important;
  
   border-radius: 8px;
   transition: all 0.3s;

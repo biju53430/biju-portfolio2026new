@@ -64,7 +64,7 @@
 .skill-card:nth-child(10) { animation-delay: 1s; }
 
 .skills-section {
- background: linear-gradient(90deg, #0c438b, #c26208) !important;
+  background: linear-gradient(90deg,  #000000, #0c438b) !important;
   padding-top: 80px;
   padding-bottom: 80px;
 }

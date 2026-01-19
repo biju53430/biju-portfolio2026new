@@ -8,7 +8,7 @@
 
 /* Section Styling */
 .project-wrapper {
- background: linear-gradient(90deg, #0c438b, #c26208);
+  background: linear-gradient(90deg,  #000000, #0c438b);
   /* background-image: var(--grain); Grainy texture from the original image */
   padding: 80px 0;
   min-height: 100vh;

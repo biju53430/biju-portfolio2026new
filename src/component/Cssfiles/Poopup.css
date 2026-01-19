@@ -1,7 +1,7 @@
 .poop-box {
     height: 20vh; /* responsive height */
     width: 40vw;  /* responsive width */
-  background: linear-gradient(90deg , #770b0b ,#af651f );
+  background: linear-gradient(90deg , #1d0ea3, #8b0a0a) ;
     position: fixed;
     top: 30vh;     /* relative to viewport height */
     left: 30vw;    /* relative to viewport width */
