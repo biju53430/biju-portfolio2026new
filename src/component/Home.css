@@ -1,0 +1,48 @@
+body{
+    background-color: pink;
+    height: 2000px;
+}
+#heading{
+    position: relative;
+    top: 50px;
+}
+#box{
+    height: 500px;
+    width: 400px;
+    position: absolute;
+    top: 200px;
+    left: 600px;
+    z-index: 2000;
+}
+#post-now{
+     text-align: center;
+}
+#discription{
+     height: 200px;
+     width: 200px;
+}
+#list-div {
+  display: flex;
+  flex-wrap: wrap; /* allows boxes to move to the next line */
+  gap: 20px; /* space between boxes */
+  padding: 20px;
+  justify-content: flex-start; /* align items from the left */
+  z-index: 1000;
+}
+
+#box1 {
+  background-color: rgb(252, 238, 238) !important;
+  border-radius: 10px;
+  padding: 15px;
+  height: 600px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  width: 400px; /* width of each box */
+  flex:  300px; /* allows responsive resizing */
+  z-index: 1000;
+}
+
+#box {
+  height: 700px;
+  z-index: 1000;
+}
+

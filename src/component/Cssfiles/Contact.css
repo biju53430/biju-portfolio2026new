@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+/* Page background */
+.whole-div {
+  min-height: 100vh;
+ background: linear-gradient(90deg, #0c438b, #c26208);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeInBg 1s ease;
+}
+
+/* Card container */
+.contact-container {
+  background: #ffffff;
+  padding: 35px 30px;
+  border-radius: 18px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  animation: slideUp 0.8s ease;
+}
+
+/* Title */
+.contact-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.contact-title span {
+  color: #c26208;
+}
+
+/* Gmail Icon animation */
+#gmail-img {
+  height: 40px;
+  object-fit: contain;
+  animation: floatGmail 2.5s ease-in-out infinite;
+}
+
+/* Subtitle */
+.contact-subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 25px;
+  animation: fadeInUp 0.8s ease;
+}
+
+/* Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  animation: fadeInUp 1s ease;
+}
+#phone{
+    height: 30px;
+    width: 30px;
+}
+#phone-box{
+     background: linear-gradient(90deg, #c3d4e7, #4008c2);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.contact-form textarea {
+  resize: none;
+  min-height: 120px;
+}
+
+/* Input focus */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #0c438b;
+  box-shadow: 0 0 0 3px rgba(12, 67, 139, 0.15);
+  transform: scale(1.02);
+}
+
+/* Button */
+.btn-gradient {
+  margin-top: 10px;
+  background: linear-gradient(90deg, #0c438b, #c26208);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 30px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Button hover */
+.btn-gradient:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Button click */
+.btn-gradient:active {
+  transform: scale(0.98);
+}
+
+/* Social Icons */
+.social-icons {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  animation: fadeInUp 1s ease;
+}
+
+.social-icons img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  filter: grayscale(30%);
+}
+
+.social-icons img:hover {
+  transform: translateY(-6px) scale(1.15);
+  filter: grayscale(0%);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Common alert styling */
+.custom-alert {
+  max-width: 100%;
+  margin-bottom: 15px;
+  padding: 14px 18px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  animation: fadeSlide 0.3s ease-in-out;
+}
+
+/* 🔵 Blue Success */
+.alert-blue {
+  background-color: #e6f0ff;
+  color: #0b5ed7;
+  border-left: 5px solid #0b5ed7;
+}
+
+/* 🟠 Orange Error */
+#alert{
+  background:linear-gradient(90deg , rgb(126, 72, 10) ,rgb(126, 67, 67) ,  rgb(83, 126, 219));
+  color: red;
+}
+#sucess{
+  background:linear-gradient(90deg , rgb(28, 53, 167) ,rgb(19, 44, 99) ,  rgb(161, 81, 15));
+  color: rgb(4, 214, 22);
+}
+/* Responsive text */
+@media (max-width: 576px) {
+  .custom-alert {
+    font-size: 14px;
+    padding: 12px 14px;
+  }
+}
+
+/* Animation */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Animations */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInBg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatGmail {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .contact-container {
+    padding: 25px 20px;
+  }
+
+  .contact-title {
+    font-size: 22px;
+  }
+
+  #gmail-img {
+    height: 28px;
+  }
+
+  .social-icons img {
+    width: 32px;
+    height: 32px;
+  }
+}

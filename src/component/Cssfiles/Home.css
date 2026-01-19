@@ -1,0 +1,252 @@
+/* =========================
+   Global Reset & Overflow Fix
+   ========================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* prevent horizontal scroll */
+  font-family: 'Arial', sans-serif;
+}
+
+/* =========================
+   Dark / Light Mode
+   ========================= */
+.dark-mode {
+    background: linear-gradient(90deg, #0c438b, #c26208);
+  color: #e0e0e0;
+}
+
+.light-mode {
+  background: linear-gradient(135deg, #f9f9f9, #ffffff);
+  color: #333;
+}
+
+/* =========================
+   Navigation Bar
+   ========================= */
+#nav {
+  background: linear-gradient(90deg, #0c438b, #c26208);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px; /* fixed padding */
+  z-index: 1000;
+  height: 70px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Nav Container Flex */
+#nav .container-fluid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Logo */
+.logo {
+  height: 50px;
+  transition: transform 0.3s;
+}
+.logo:hover {
+  transform: rotate(10deg);
+}
+
+/* Portfolio Text */
+#port-text {
+  display: flex;
+  margin-left: 10px;
+  font-family: 'Brush Script MT', cursive;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Nav Links */
+.dark-links .nav-link {
+  color: #ace5ff !important;
+  font-weight: bold;
+  transition: all 0.3s;
+  position: relative;
+ margin-left: 120px;
+}
+.light-links .nav-link {
+  color: #fff !important;
+  font-weight: bold;
+  transition: all 0.3s;
+   position: relative;
+ margin-left: 120px;
+}
+#social-img{
+    margin-left: 95px ;
+}
+#modeBtn{
+    background:transparent;
+    border-color: black !important;
+}
+.nav-link:hover {
+  transform: scale(1.1);
+}
+
+/* Navbar Toggler */
+#threelinebox {
+  border: none;
+}
+#threelinebox:focus,
+#threelinebox:active,
+#threelinebox:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* =========================
+   Home Section
+   ========================= */
+.home-section {
+  min-height: 100vh;
+  padding: 120px 0 50px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+ 
+}
+
+/* Text Section */
+.text-section {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s forwards;
+}
+.text-section h2 {
+  animation-delay: 0.3s;
+}
+.text-section p {
+  animation-delay: 0.6s;
+}
+.btn {
+  animation-delay: 0.9s;
+}
+
+.hello-text {
+  font-size: 2.5rem;
+  color: #b56a2e;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.name-text {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #b56a2e;
+  margin: 10px 0;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: inherit;
+  line-height: 1.6;
+}
+
+/* Buttons */
+.btn-dark {
+    background: linear-gradient(90deg, #0c438b, #c26208);
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+.btn-dark:hover {
+    background: linear-gradient(90deg, #c26208 , #0c438b);
+  transform: scale(1.05);
+}
+.btn-light{
+      border-color: #1b1b1b !important;
+
+ 
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+/* Image Section */
+.image-section {
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s forwards;
+  animation-delay: 0.6s;
+}
+.profile-img {
+  border-radius: 15px;
+  box-shadow: 0px 10px 25px rgba(196, 170, 121, 0.25);
+  max-width: 80%;
+  transition: transform 0.5s;
+}
+.profile-img:hover {
+  transform: scale(1.05);
+    box-shadow: 0px 10px 25px rgba(124, 228, 5, 0.25);
+}
+ #navbarContent{
+    background: linear-gradient(90deg,#0c438b, #c26208);
+ position: relative;
+ border-bottom-left-radius: 10px;
+ border-bottom-right-radius: 10px;
+  }
+/* =========================
+   Animations
+   ========================= */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+   
+ 
+}
+
+/* =========================
+   Responsive
+   ========================= */
+@media (max-width: 992px) {
+  .text-section, .image-section {
+    text-align: center;
+    margin: auto;
+  }
+  .profile-img {
+    max-width: 60%;
+    margin-top: 30px;
+  }
+  #port-text {
+    display: flex;
+  }
+  #port-text {
+  display: flex;
+  margin-left: 40px;
+  font-family: 'Brush Script MT', cursive;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+}
+
+@media (max-width: 480px) {
+  .hello-text {
+    font-size: 1.8rem;
+  }
+  .name-text {
+    font-size: 2rem;
+  }
+  .description {
+    font-size: 0.9rem;
+  }
+}

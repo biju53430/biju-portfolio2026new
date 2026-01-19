@@ -1,0 +1,76 @@
+/* Main Footer Background */
+.footer-section {
+ background: linear-gradient(90deg, #113f7c, #8d4604);
+    padding-top: 60px;
+    color: white;
+    text-align: center;
+}
+
+/* Circular Placeholders for Logos */
+.icon-placeholder {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.icon-placeholder:hover {
+    transform: scale(1.1);
+}
+
+/* Navigation Links Styling */
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    font-family: 'Times New Roman', serif; /* Matching the demo style */
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+}
+
+/* Bottom Copyright Bar */
+.copyright-bar {
+     background: linear-gradient(90deg, #04306b, #5e2f03);
+    
+    padding: 25px 0;
+    border-top: 1px solid #222;
+}
+
+.copyright-bar p {
+    margin: 0;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #e0e0e0;
+}
+
+.designer {
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+#social-icons{
+    height: 50px;
+    background: transparent !important;
+}
+#hero{
+    position: relative;
+    bottom: 4000px;
+}
+/* Responsive spacing for mobile */
+@media (max-width: 576px) {
+    .footer-links a {
+        display: block;
+        margin: 10px 0;
+    }
+}

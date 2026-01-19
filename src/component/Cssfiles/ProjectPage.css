@@ -1,0 +1,315 @@
+/* Variables for Easy Customization */
+:root {
+  --orange-accent: #fd7e14;
+  --dark-charcoal: #212529;
+  
+  --grain: url("https://www.transparenttextures.com/patterns/felt.png");
+}
+
+/* Section Styling */
+.project-wrapper {
+ background: linear-gradient(90deg, #0c438b, #c26208);
+  /* background-image: var(--grain); Grainy texture from the original image */
+  padding: 80px 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+ 
+}
+
+.project-heading {
+  font-family: 'Playfair Display', serif; /* Or any serif font available */
+  font-weight: 700;
+ color: #ffd700 !important; 
+  margin-bottom: 20px;
+}
+
+.project-subtext {
+  max-width: 600px;
+  font-size: 1.1rem;
+ color: white !important;
+}
+
+/* Horizontal Scroll Layout */
+.horizontal-scroll-container {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+  scroll-snap-type: x mandatory; /* Makes cards snap into place on mobile */
+  padding-left: 15px;
+}
+
+.horizontal-scroll-container::-webkit-scrollbar {
+  display: none; /* Hides scrollbar for Chrome/Safari */
+}
+
+/* Project Card Styling */
+.custom-card {
+  height: 500px;
+  border-radius: 40px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(253, 126, 20, 0.9) 0%, transparent 70%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px;
+  color: white;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+}
+
+/* Interaction Effects */
+.custom-card:hover {
+  transform: translateY(-15px);
+}
+
+.custom-card:hover .card-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.badge-custom {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 6px 15px;
+  border-radius: 30px;
+  font-size: 0.75rem;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.card-arrow {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  font-size: 1.4rem;
+  width: 45px;
+  height: 45px;
+  border: 1px solid white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-img {
+  width: 300px;
+  min-height: 200px;
+  border-radius: 5px;
+  transition: transform 0.4s ease;
+  cursor: zoom-in;
+
+}
+
+.modal-img:hover {
+  transform: scale(1.3);
+  z-index: 10;
+}
+
+/* Scroll Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-animate {
+  animation: fadeInUp 1s ease forwards;
+  scroll-snap-align: start;
+}
+
+
+/* 🔲 Backdrop */
+.custom-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(13, 110, 253, 0.15);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+  animation: fadeIn 0.3s ease;
+  padding: 10px; /* small padding so images don't touch edges */
+}
+
+/* 📦 Modal Box */
+.custom-modal-content {
+  background: #ffffff;
+  border-radius: 16px;
+  width: 95%;
+  max-width: 1100px;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: scaleUp 0.35s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 🔹 Header */
+.modal-header-custom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 24px;
+  border-bottom: 1px solid #e7eaf3;
+  background: linear-gradient(90deg, #0d6efd, #ff8c00);
+  color: white;
+  border-radius: 16px 16px 0 0;
+
+ 
+}
+
+.modal-title-custom {
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.btn-close-custom {
+  background: transparent;
+  border: none;
+  font-size: 1.4rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* 🔹 Body */
+.modal-body-custom {
+  padding: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* 🖼 Images - natural size */
+.modal-img-custom {
+  width: auto;       /* Let image width adjust */
+  max-width: 100%;   /* Don't overflow container */
+  height: auto;      /* Preserve aspect ratio */
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: zoom-in;
+}
+
+.modal-img-custom:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(13, 110, 253, 0.2);
+}
+
+/* 🔹 Footer */
+.modal-footer-custom {
+  padding: 18px 24px;
+  border-top: 1px solid #e7eaf3;
+}
+
+/* 🟠 Orange Button */
+.btn-orange {
+  background: #ff8c00;
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.btn-orange:hover {
+  background: #e07c00;
+  color: white;
+}
+.btn-close-custom{
+  transition: all;
+  transition-duration: 0.5s;
+}
+.btn-close-custom:hover{
+ background-color: #754e05;
+ border-radius: 10px;
+ transform: rotate( 360deg);
+}
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .modal-title-custom {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .modal-body-custom {
+    gap: 12px;
+  }
+
+  .btn-orange {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+}
+
+/* ✨ Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.92);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .project-wrapper {
+    padding: 40px 0;
+  }
+  
+  .project-heading {
+    font-size: 2rem;
+  }
+
+  .custom-card {
+    height: 420px;
+    border-radius: 30px;
+  }
+
+  /* Always show overlay content on mobile since there's no hover */
+  .card-overlay {
+    opacity: 1;
+    transform: translateY(0);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 60%);
+  }
+  #close-btn {
+    height: 2.5rem;
+    width: 5rem;
+    font-size: 1rem;
+    position: fixed;
+    top: 0.2%;
+    right: 0.1%;
+z-index: 200;
+  }
+}
+
+@media (max-width: 480px) {
+  #close-btn {
+    height: 2rem;
+    width: 4rem;
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,40 @@
+
+/* Preloader container: full screen and center content */
+.preloader {
+  position: fixed;       /* stay on top */
+  top: 0;
+  left: 0;
+  width: 100vw;          /* full width */
+  height: 100vh;         /* full height */
+  display: flex;         /* center logo */
+  justify-content: center;
+  align-items: center;
+ background: linear-gradient(90deg, #c26208 , #0c438b);
+  z-index: 9999;
+}
+
+/* Logo */
+#logo {
+  height: 100px;          /* default size */
+  width: auto;
+  animation: spin 2s linear infinite;
+}
+
+/* Spin animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #logo {
+    height: 70px; /* smaller logo on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  #logo {
+    height: 50px; /* smaller logo on small phones */
+  }
+}
