@@ -87,6 +87,7 @@ const Nav = () => {
               <li className="nav-item"><a className="nav-link" href="#about">About</a></li>
               <li className="nav-item"><a className="nav-link" href="#project">Project</a></li>
               <li className="nav-item"><a className="nav-link" href="#skill">Skills</a></li>
+              <li className="nav-item"><a className="nav-link" href="#certificate">Certificate</a></li>
               <li className="nav-item"><a className="nav-link" href="#contact">Contact</a></li>
             </ul>
 
@@ -145,8 +146,8 @@ const Nav = () => {
               <p className="lead mb-4" style={{ fontFamily: "'Open Sans', sans-serif", }}>
                 I am a passionate web developer crafting modern, clean, and interactive user experiences.
               </p>
-              <a href="#project" className="btn btn-dark btn-lg" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400" onClick={clickSound}>
-                MY PROJECT
+              <a href="#project" className="btn btn-dark btn-lg" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400" onClick={Sound} id='btn-lg' >
+                EXPLORE
               </a>
             </div>
 

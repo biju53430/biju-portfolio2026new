@@ -57,7 +57,7 @@
 .card-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(253, 126, 20, 0.9) 0%, transparent 70%);
+  background: linear-gradient(to top, rgba(72, 57, 112, 0.9) 0%, transparent 70%);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -166,7 +166,7 @@
   align-items: center;
   padding: 18px 24px;
   border-bottom: 1px solid #e7eaf3;
-  background: linear-gradient(90deg, #0d6efd, #ff8c00);
+   background: linear-gradient(90deg , #0F172A, #3f597c) !important;
   color: white;
   border-radius: 16px 16px 0 0;
 
@@ -219,7 +219,7 @@
 
 /* 🟠 Orange Button */
 .btn-orange {
-  background: #ff8c00;
+   background: linear-gradient(90deg , #0F172A, #3f597c) !important;
   color: white;
   font-weight: 600;
   border-radius: 10px;
@@ -227,7 +227,7 @@
 }
 
 .btn-orange:hover {
-  background: #e07c00;
+  background: linear-gradient(90deg , #4f5a72, #3f597c) !important;
   color: white;
 }
 .btn-close-custom{

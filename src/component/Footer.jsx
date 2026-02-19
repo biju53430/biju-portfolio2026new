@@ -7,6 +7,7 @@ import github from "./Images/github.png";
 import speed from './Images/speed.mp3'
 
 
+
 const Footer = () => {
    
      const Sound = () => {

@@ -6,7 +6,9 @@
   margin: 0;
   padding: 0;
 }
-
+#btn-lg{
+   background: linear-gradient(90deg , #0F172A, #3f597c) !important;
+}
 html, body {
   width: 100%;
   overflow-x: hidden; /* prevent horizontal scroll */
@@ -30,7 +32,7 @@ html, body {
    Navigation Bar
    ========================= */
 #nav {
-background: linear-gradient(90deg , #0c438b, #c26208) ;
+background: linear-gradient(90deg , #0F172A, #184177) !important;
   width: 100%;
   position: fixed;
   top: 0;
@@ -160,6 +162,7 @@ background: linear-gradient(90deg , #0c438b, #c26208) ;
 }
 
 /* Buttons */
+/* buttom ko lagi ho page ko lagi haina  */
 .btn-dark {
    background: linear-gradient(90deg, #c26208, #0c438b) !important;
  
@@ -197,7 +200,7 @@ background: linear-gradient(90deg , #0c438b, #c26208) ;
     box-shadow: 0px 10px 25px rgba(124, 228, 5, 0.25);
 }
  #navbarContent{
-    background: linear-gradient(90deg,#0c438b, #c26208);
+  background: linear-gradient(90deg , #0F172A, #184177) !important;
  position: relative;
  border-bottom-left-radius: 10px;
  border-bottom-right-radius: 10px;

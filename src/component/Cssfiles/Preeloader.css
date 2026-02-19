@@ -9,7 +9,7 @@
   display: flex;         /* center logo */
   justify-content: center;
   align-items: center;
- background: linear-gradient(90deg, #c26208 , #0c438b);
+ background: linear-gradient(90deg , #0F172A, #2b476b) !important;
   z-index: 9999;
 }
 

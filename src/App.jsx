@@ -8,38 +8,45 @@ import Skill from './component/Skill';
 import Poopup from './component/Poopup';
 import { useEffect, useState } from 'react';
 import Preloader from './component/Preloader';
+import Certificate from './component/Certificate';
+import ChatBot from './component/ChatBot';
+import './App.css'
 
 const App = () => {
+  const [openChat, setOpenChat] = useState(false);
   const [loading, setLoading] = useState(true); // Track preloader
   const [showPoopup, setShowPoopup] = useState(false);
 
   // Preloader timer
   useEffect(() => {
     const timer = setTimeout(() => {
-      setLoading(false); // Hide preloader after 2-3s
-    }, 1000); // Adjust as needed
-
+      setLoading(false);
+    }, 1000);
     return () => clearTimeout(timer);
   }, []);
 
   // Popup timer
   useEffect(() => {
-    const Timer = setTimeout(() => {
+    const timer = setTimeout(() => {
       setShowPoopup(true);
-    }, 60000); // 60s
-
-    return () => clearTimeout(Timer);
+    }, 2000);
+    return () => clearTimeout(timer);
   }, []);
 
   if (loading) {
-    // Show only preloader while loading
     return <Preloader />;
   }
 
-  // Once loading is false, render your full app
+  const chatClick = () => {
+    setOpenChat(!openChat);
+  }
+
   return (
     <>
       <Nav />
+
+      {/* Blur overlay when chat is open */}
+      {openChat && <div className="blur-overlay" onClick={chatClick}></div>}
 
       <section id='project'>
         <Project />
@@ -51,11 +58,31 @@ const App = () => {
 
       {showPoopup && <Poopup />}
 
+      <section id='certificate'>
+        <Certificate />
+      </section>
+
       <section id='contact'>
         <Contact />
       </section>
 
       <Footer />
+
+      {/* Chat button */}
+      <button 
+        onClick={chatClick} 
+        className="chat-button"
+      >
+        {openChat ? "Close Chat" : "Open Chat"}
+      </button>
+
+      {/* ChatBot overlay */}
+      {openChat && (
+        <div className="chatbot-container">
+
+          <ChatBot closeChat={() => setOpenChat(false)}/>
+        </div>
+      )}
     </>
   );
 };

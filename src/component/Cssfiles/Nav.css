@@ -1,6 +1,6 @@
 /* Navigation bar */
 #nav {
-    background-color: rgb(179, 97, 42) !important;
+  
     width: 100%;
     position: fixed;
     top: 0;
@@ -174,7 +174,7 @@ ul li a {
 }
 
 #navbarContent{
-  background: linear-gradient(90deg , #0c438b, #c26208) ;
+ background: linear-gradient(90deg , #0F172A, #184177) !important;
    border-radius: 20px !important;
 }
 #navbarContent::before {

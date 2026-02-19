@@ -11,6 +11,9 @@ import Click from "./Images/sucess.mp3";
 import Clickwrong from "./Images/wrongClick.mp3";
 
 const ContactForm = () => {
+
+
+  
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
@@ -21,7 +24,8 @@ const ContactForm = () => {
 
   // ✅ Email validation
   const isValidEmail = (email) =>
-    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  /^[^\s@]+@gmail\.com$/.test(email);
+
 
   // 🔁 Helper functions
   const playError = (msg) => {

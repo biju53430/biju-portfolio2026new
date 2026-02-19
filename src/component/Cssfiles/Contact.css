@@ -8,7 +8,7 @@
 /* Page background */
 .whole-div {
   min-height: 100vh;
-  background: linear-gradient(90deg,  #000000, #0c438b) !important;
+ background: linear-gradient(90deg,  #000000, #0c438b);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -72,6 +72,9 @@
 #phone-box{
      background: linear-gradient(90deg, #c3d4e7, #4008c2);
 }
+#phone-box:hover{
+  color: green;
+}
 
 .contact-form input,
 .contact-form textarea {
@@ -100,7 +103,7 @@
 /* Button */
 .btn-gradient {
   margin-top: 10px;
-  background: linear-gradient(90deg, #0c438b, #c26208);
+ background: linear-gradient(90deg , #0F172A, #6086b8) ;
   color: white;
   border: none;
   padding: 12px;
@@ -113,7 +116,8 @@
 /* Button hover */
 .btn-gradient:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 10px 25px rgba(170, 5, 5, 0.25);
+  color: rgb(129, 250, 59);
 }
 
 /* Button click */
