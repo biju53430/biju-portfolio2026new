@@ -9,7 +9,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import biju from './Images/biju.jpg';
 import Click from './Images/Click.mp3';
-// import ClickSound from "./Images/ClickSound.mp3";
+import ClickSound from "./Images/ClickSound.mp3";
 import speed from './Images/speed.mp3'
 
 
