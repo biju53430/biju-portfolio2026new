@@ -165,7 +165,7 @@ background: linear-gradient(90deg , #0F172A, #184177) !important;
 /* Buttons */
 /* buttom ko lagi ho page ko lagi haina  */
 .btn-dark {
-   background: linear-gradient(90deg, #c26208, #0c438b) !important;
+  background: linear-gradient(90deg , #0F172A, #184177) !important;
  
   border-radius: 8px;
   transition: all 0.3s;
