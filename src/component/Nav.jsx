@@ -26,14 +26,12 @@ const Nav = () => {
 
 
   // Dark/Light mode
-  const [mode, setMode] = useState(() => {
+  const [mode] = useState(() => {
     const savedMode = localStorage.getItem("darkMode");
     return savedMode === "true";
   });
 
-  useEffect(() => {
-    localStorage.setItem("darkMode", mode);
-  }, [mode]);
+  
 
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
@@ -143,7 +141,7 @@ const Nav = () => {
     fontSize: "14px",
     color: "white",
     fontWeight: "500",
-    animation: "bounce 3s infinite"
+    animation: "bounce 3.5s infinite"
   }}>Profile</span>
 </div>
   
