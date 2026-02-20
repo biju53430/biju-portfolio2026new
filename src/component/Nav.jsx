@@ -11,10 +11,12 @@ import biju from './Images/biju.jpg';
 import Click from './Images/Click.mp3';
 import ClickSound from "./Images/ClickSound.mp3";
 import speed from './Images/speed.mp3'
-
+import Profile from './Profile';
+import profileImg from './Images/biju.jpg'
 
 const Nav = () => {
 
+  const [profileOpen , setProfileOpen] = useState(false);
 
   // speed sound
     const Sound = () => {
@@ -37,10 +39,13 @@ const Nav = () => {
     AOS.init({ duration: 1000, once: true });
   }, []);
 
-  const modeToggle = () => {
+  const profileClick = () => {
     const audio = new Audio(Click);
     audio.play();
-    setMode(!mode);
+  
+
+    setProfileOpen(!profileOpen);
+   
   };
 
   // const clickSound = () => {
@@ -77,6 +82,7 @@ const Nav = () => {
             aria-expanded={navOpen}
             aria-label="Toggle navigation"
             onClick={navToggle}
+            style={{color:'white'}}
           >
             {navOpen ? "✖" : "☰"}
           </button>
@@ -117,19 +123,38 @@ const Nav = () => {
       style={{ animation: "bounce 2s infinite" }}
     />
   </a>
-  <button
-    className={`btn ${mode ? "btn-light" : "btn-dark"} ms-3`}
-    onClick={modeToggle}
-    id="modeBtn"
-  >
-    {mode ? "🌞" : "🌙"}
-  </button>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", cursor: "pointer" }} onClick={profileClick}>
+  <img 
+    src={profileImg} 
+    alt="Profile"
+    id="profileBtn"
+    style={{
+      height: "50px",
+      width: "50px",
+      borderRadius: "50%",
+      transition: "all 0.3s ease",
+      boxShadow: "0 4px 15px rgba(0,0,0,0.3)",
+      animation: "bounce 3s infinite"
+    }}
+  />
+  <span style={{
+    marginTop: "5px",
+    fontSize: "14px",
+    color: "white",
+    fontWeight: "500",
+    animation: "bounce 3s infinite"
+  }}>Profile</span>
+</div>
+  
+  
+ 
 </div>
 
           </div>
         </div>
       </nav>
-
+ {profileOpen && (<Profile id="profile" setProfileOpen={setProfileOpen}  ></Profile>)}
       {/* Home Section */}
       <section className="home-section d-flex align-items-center" id='about'>
         <div className="container">

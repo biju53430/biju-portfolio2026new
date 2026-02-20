@@ -11,6 +11,12 @@ import Preloader from './component/Preloader';
 import Certificate from './component/Certificate';
 import ChatBot from './component/ChatBot';
 import './App.css'
+import chatImg from './component/certificate-img/speech-bubble_17683625.png'
+import goSound from './component/Images/Poopup.mp3';
+
+
+
+
 
 const App = () => {
   const [openChat, setOpenChat] = useState(false);
@@ -29,7 +35,7 @@ const App = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowPoopup(true);
-    }, 2000);
+    }, 60000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -37,13 +43,18 @@ const App = () => {
     return <Preloader />;
   }
 
+ 
+
   const chatClick = () => {
+    const audio = new Audio(goSound);
     setOpenChat(!openChat);
+    audio.play();
+
   }
 
   return (
     <>
-      <Nav />
+    <Nav></Nav>
 
       {/* Blur overlay when chat is open */}
       {openChat && <div className="blur-overlay" onClick={chatClick}></div>}
@@ -69,17 +80,15 @@ const App = () => {
       <Footer />
 
       {/* Chat button */}
-      <button 
-        onClick={chatClick} 
-        className="chat-button"
-      >
-        {openChat ? "Close Chat" : "Open Chat"}
-      </button>
+     
+        <img src={chatImg} alt="" className='chat-button'  onClick={chatClick}  style={{ animation: "bounce 3s infinite" }} />
+   
+   
+   
 
       {/* ChatBot overlay */}
       {openChat && (
         <div className="chatbot-container">
-
           <ChatBot closeChat={() => setOpenChat(false)}/>
         </div>
       )}

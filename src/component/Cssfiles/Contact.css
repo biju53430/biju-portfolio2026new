@@ -26,7 +26,9 @@
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
   animation: slideUp 0.8s ease;
 }
-
+#sending-btn{
+  background:  linear-gradient(90deg,  #000000, #0c438b);
+}
 /* Title */
 .contact-title {
   display: flex;

@@ -19,13 +19,14 @@ html, body {
    Dark / Light Mode
    ========================= */
 .dark-mode {
-  background: linear-gradient(90deg,  #000000, #0c438b);
+    background: linear-gradient(90deg, #0c438b, #000000);
   color: #e0e0e0;
 }
 
 .light-mode {
   color: #fdfdfd;
-  background: linear-gradient(90deg, #0c438b, #000000);
+background: linear-gradient(90deg,  #000000, #0c438b);
+  
 }
 
 /* =========================
@@ -96,7 +97,7 @@ background: linear-gradient(90deg , #0F172A, #184177) !important;
 }
 #modeBtn{
     background:transparent;
-    border-color: black !important;
+    border-color: rgb(0, 0, 0) !important;
 }
 .nav-link:hover {
   transform: scale(1.1);
