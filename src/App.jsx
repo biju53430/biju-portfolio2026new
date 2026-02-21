@@ -13,7 +13,8 @@ import ChatBot from './component/ChatBot';
 import './App.css'
 import chatImg from './component/certificate-img/speech-bubble_17683625.png'
 import goSound from './component/Images/Poopup.mp3';
-
+import Ghanti from './component/Ghanti'
+import ShakeSound from './component/Ghanti';
 
 
 
@@ -76,6 +77,8 @@ const App = () => {
       <section id='contact'>
         <Contact />
       </section>
+
+<ShakeSound></ShakeSound>
 
       <Footer />
 
