@@ -90,10 +90,10 @@ const App = () => {
 
       <Footer />
 
-<img src={Ghantiimg} className='ghanti-btn' style={{ animation: "bounce 3s infinite" }} onClick={GhantiClick}></img>
+<img src={Ghantiimg} className='ghanti-btn' style={{ animation: "bounce 3s infinite" }} alt='Ghanti-btn' onClick={GhantiClick}></img>
       {/* Chat button */}
      
-        <img src={chatImg} alt="" className='chat-button'  onClick={chatClick}  style={{ animation: "bounce 3s infinite" }} />
+        <img src={chatImg} alt="chat-btn" className='chat-button'  onClick={chatClick}  style={{ animation: "bounce 3s infinite" }} />
    
    
    
