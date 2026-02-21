@@ -12,7 +12,22 @@
   cursor: pointer;
   font-size: 1rem; /* responsive font */
 }
-
+.ghanti-btn{
+  position: fixed;
+  bottom: 15%; /* instead of px, use % for responsiveness */
+  left: 5%; /* instead of px */
+  z-index: 1001;
+  padding: 10px 20px;
+  height: 70px;
+  min-width: 60px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 25px !important;
+ 
+ } /* responsive f
+}
 /* Smaller screens adjustments */
 @media (max-width: 768px) {
   .chat-button {

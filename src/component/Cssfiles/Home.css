@@ -19,13 +19,13 @@ html, body {
    Dark / Light Mode
    ========================= */
 .dark-mode {
-
+background: linear-gradient(90deg,  #000000, #0c438b) !important;
   color: #e0e0e0;
 }
 
 .light-mode {
   color: #fdfdfd;
-background: linear-gradient(90deg,  #000000, #0c438b);
+background: linear-gradient(90deg,  #000000, #0c438b) !important;
   
 }
 

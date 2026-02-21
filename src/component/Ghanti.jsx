@@ -4,7 +4,7 @@ import "./Cssfiles/Ghanti.css";
 import Ghanti from './Images/ghanti.png';
 import vibGhanti from './Images/vib-ghanti.jpg';
 
-const ShakeSound = () => {
+const ShakeSound = ({closeGhanti}) => {
   const [shakeCount, setShakeCount] = useState(0);
   const shaking = useRef(false); // Prevent multiple triggers too quickly
   const [shakeSound, setShakeSound] = useState(false);
@@ -92,8 +92,8 @@ const ShakeSound = () => {
       <div className="shake-container">
         <h2 style={{ fontSize: "1.8rem", marginBottom: "20px" }} className="text">
           राष्ट्रिय स्वतन्त्र पार्टी
+<button className="close-btn" onClick={closeGhanti}>✖</button>
         </h2>
-
         {/* Show vibration or default image */}
         {shakeSound ? (
           <img src={vibGhanti} className="Ghanti-img" alt="vibration" />

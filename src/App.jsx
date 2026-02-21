@@ -13,9 +13,9 @@ import ChatBot from './component/ChatBot';
 import './App.css'
 import chatImg from './component/certificate-img/speech-bubble_17683625.png'
 import goSound from './component/Images/Poopup.mp3';
+import Ghantiimg from './component/Images/ghanti.png'
 
-import ShakeSound from './component/Ghanti';
-
+import Ghanti from './component/Ghanti'
 
 
 
@@ -23,12 +23,12 @@ const App = () => {
   const [openChat, setOpenChat] = useState(false);
   const [loading, setLoading] = useState(true); // Track preloader
   const [showPoopup, setShowPoopup] = useState(false);
-
+  const [openGhanti , setOpenGhanti] = useState (false);
   // Preloader timer
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 1000);
+    }, 200);
     return () => clearTimeout(timer);
   }, []);
 
@@ -36,7 +36,7 @@ const App = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowPoopup(true);
-    }, 1000);
+    }, 60000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -53,13 +53,21 @@ const App = () => {
 
   }
 
+  const GhantiClick = () => {
+    const audio = new Audio(goSound);
+    setOpenGhanti(!openGhanti);
+    audio.play();
+
+  }
+
+
   return (
     <>
     <Nav></Nav>
 
       {/* Blur overlay when chat is open */}
       {openChat && <div className="blur-overlay" onClick={chatClick}></div>}
-
+           {openGhanti && <div className='blur-overlap'></div>}
       <section id='project'>
         <Project />
       </section>
@@ -78,10 +86,11 @@ const App = () => {
         <Contact />
       </section>
 
-<ShakeSound></ShakeSound>
+
 
       <Footer />
 
+<img src={Ghantiimg} className='ghanti-btn' style={{ animation: "bounce 3s infinite" }} onClick={GhantiClick}></img>
       {/* Chat button */}
      
         <img src={chatImg} alt="" className='chat-button'  onClick={chatClick}  style={{ animation: "bounce 3s infinite" }} />
@@ -93,6 +102,11 @@ const App = () => {
       {openChat && (
         <div className="chatbot-container">
           <ChatBot closeChat={() => setOpenChat(false)}/>
+        </div>
+      )}
+      {openGhanti && (
+        <div className="chatbot-container">
+          <Ghanti closeGhanti={() => setOpenGhanti(false)}/>
         </div>
       )}
     </>
