@@ -1,10 +1,31 @@
 import { useEffect, useRef, useState } from "react";
 import sound from "./Images/bell.mp3";
+import "./Cssfiles/Ghanti.css";
+import Ghanti from './Images/ghanti.png';
+import vibGhanti from './Images/vib-ghanti.jpg';
 
 const ShakeSound = () => {
   const [shakeCount, setShakeCount] = useState(0);
-  const lastShakeTime = useRef(0);
-  const shaking = useRef(false); // ✅ track if shake is ongoing
+  const shaking = useRef(false); // Prevent multiple triggers too quickly
+  const [shakeSound, setShakeSound] = useState(false);
+  const timerRef = useRef(null); // Ref for 3-second timer
+
+  // Function to show vib image and play sound
+  const triggerGhanti = () => {
+    setShakeSound(true); // Show vib image
+    const audio = new Audio(sound);
+    audio.play();
+    setShakeCount(prev => prev + 1);
+
+    // Reset previous timer if exists
+    if (timerRef.current) clearTimeout(timerRef.current);
+
+    // Hide vib image after 3 seconds
+    timerRef.current = setTimeout(() => {
+      setShakeSound(false);
+      timerRef.current = null;
+    }, 3000);
+  };
 
   useEffect(() => {
     let lastX = null;
@@ -22,22 +43,16 @@ const ShakeSound = () => {
           Math.abs(acc.y - lastY) +
           Math.abs(acc.z - lastZ);
 
-        const currentTime = new Date().getTime();
-
         // Only trigger if not already shaking
         if (delta > threshold && !shaking.current) {
-          shaking.current = true; // start shake
-          lastShakeTime.current = currentTime;
+          shaking.current = true;
 
-          const audio = new Audio(sound);
-          audio.play();
+          triggerGhanti(); // Play sound & show vib image
 
-          setShakeCount((prev) => prev + 1);
-
-          // Reset shaking state after 1 second to allow next shake
+          // Reset shaking state after 0.5 second to allow next shake
           setTimeout(() => {
             shaking.current = false;
-          }, 1000);
+          }, 500);
         }
       }
 
@@ -68,13 +83,26 @@ const ShakeSound = () => {
 
     return () => {
       window.removeEventListener("devicemotion", handleMotion);
+      if (timerRef.current) clearTimeout(timerRef.current);
     };
   }, []);
 
   return (
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
-      <h2>Shake your phone 📱</h2>
-      <p>Shakes detected: {shakeCount}</p>
+    <div className="whole-box" onClick={triggerGhanti}>
+      <div className="shake-container">
+        <h2 style={{ fontSize: "1.8rem", marginBottom: "20px" }} className="text">
+          राष्ट्रिय स्वतन्त्र पार्टी
+        </h2>
+
+        {/* Show vibration or default image */}
+        {shakeSound ? (
+          <img src={vibGhanti} className="Ghanti-img" alt="vibration" />
+        ) : (
+          <img src={Ghanti} className="Ghanti-img" alt="default" />
+        )}
+
+        <div className="shake-count">{shakeCount}</div>
+      </div>
     </div>
   );
 };

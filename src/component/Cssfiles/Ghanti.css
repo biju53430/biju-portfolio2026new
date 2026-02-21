@@ -1,0 +1,63 @@
+.whole-box{
+    background-color: rgb(16, 101, 170);
+    height: 465px;
+    
+}
+.shake-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  
+  min-height: 60vh;
+  background-color: rgb(30, 144, 238);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  width: 90%;           /* use % for responsiveness */
+  max-width: 600px;     /* keep max width for large screens */
+  margin: 0px auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box; /* ensures padding is included in width */
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 768px) {
+  .shake-container {
+    padding: 25px;
+    width: 95%;
+  }
+}
+
+/* Small screens (mobile phones) */
+@media (max-width: 480px) {
+  .shake-container {
+    
+    width: 100%;
+    border-radius: 15px;
+  }
+}
+.shake-count {
+  background: #ffffff;
+  padding: 20px 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-size: 2rem;
+  font-weight: bold;
+  color: #208ad1;
+  animation: bounce 1s infinite;
+  text-align: center;
+  position: relative;
+  top: 40px;
+}
+
+/* Bounce animation */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.Ghanti-img{
+    width: 200px;
+    
+}
